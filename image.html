@@ -5,7 +5,7 @@
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; }
   body { width: 1024px; height: 1024px; font-family: Georgia, 'Times New Roman', serif; background: #f8f5f0; color: #1a1a1a; overflow: hidden; }
-  .page { width: 1024px; height: 1024px; padding: 24px 36px 20px; display: flex; flex-direction: column; }
+  .page { width: 1024px; height: 1024px; padding: 20px 36px 14px; display: flex; flex-direction: column; }
 
   /* Masthead */
   .masthead { text-align: center; border-bottom: 4px double #1a1a1a; padding-bottom: 6px; margin-bottom: 6px; }
@@ -19,7 +19,7 @@
   .datebar .edition { font-size: 13px; font-style: italic; color: #555; }
 
   /* Lead story */
-  .lead { border-bottom: 1px solid #999; padding-bottom: 12px; margin-bottom: 12px; }
+  .lead { border-bottom: 1px solid #999; padding-bottom: 10px; margin-bottom: 10px; }
   .lead .kicker { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #b91c1c; margin-bottom: 4px; }
   .lead h2 { font-size: 38px; font-weight: 900; line-height: 1.05; margin-bottom: 6px; }
   .lead-row { display: flex; gap: 16px; align-items: center; }
@@ -27,12 +27,12 @@
   .lead-text p { font-size: 16px; line-height: 1.5; color: #333; }
   .lead-text .meta { font-size: 12px; color: #777; margin-top: 6px; font-style: italic; }
   .lead-art { width: 430px; flex-shrink: 0; }
-  .lead-art img { width: 430px; height: 170px; object-fit: cover; object-position: center 42%; display: block; }
+  .lead-art img { width: 430px; height: 150px; object-fit: cover; object-position: center 50%; display: block; }
   .lead-art .caption { font-size: 11px; font-style: italic; color: #666; margin-top: 4px; line-height: 1.3; }
 
   /* Story grid */
   .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; flex: 1; }
-  .story { border-bottom: 1px solid #ccc; padding: 12px 0; }
+  .story { border-bottom: 1px solid #ccc; padding: 8px 0; }
   .story:last-child, .story:nth-last-child(2) { border-bottom: none; }
   .story .kicker { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #b91c1c; margin-bottom: 3px; }
   .story .head-row { display: flex; gap: 10px; align-items: flex-start; margin-bottom: 4px; }
@@ -40,14 +40,12 @@
   .story h3 { font-size: 20px; font-weight: 800; line-height: 1.15; flex: 1; }
   .story p { font-size: 13.5px; line-height: 1.4; color: #444; }
 
-  /* Bottom strip — two rows of briefs */
-  .bottom { border-top: 2px solid #1a1a1a; padding-top: 8px; margin-top: 10px; }
-  .bottom-row { display: flex; justify-content: space-between; }
-  .bottom-row + .bottom-row { border-top: 1px solid #ccc; margin-top: 7px; padding-top: 7px; }
-  .bottom .item { flex: 1; padding: 0 10px; border-right: 1px solid #ccc; }
-  .bottom .item:last-child { border-right: none; }
-  .bottom .item .label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #b91c1c; }
-  .bottom .item .text { font-size: 12.5px; font-weight: 700; line-height: 1.3; margin-top: 2px; }
+  /* Around the World — three columns of one-liners */
+  .around { border-top: 2px solid #1a1a1a; padding-top: 7px; margin-top: 8px; }
+  .around h4 { font-size: 13px; font-weight: 900; letter-spacing: 2.5px; text-transform: uppercase; margin-bottom: 4px; }
+  .around .cols { display: grid; grid-template-columns: 1fr 1fr 1fr; grid-template-rows: repeat(13, auto); grid-auto-flow: column; gap: 0 20px; }
+  .around .wl { font-size: 10px; line-height: 1.35; color: #333; padding: 0.5px 0; }
+  .around .wl b { color: #b91c1c; font-size: 9.5px; letter-spacing: 0.5px; text-transform: uppercase; }
 </style>
 </head>
 <body>
@@ -66,67 +64,20 @@
 
   <div class="lead">
     <div class="kicker">Middle East &mdash; Gulf Crisis</div>
-    <h2>US Jets Strike Iran as Gulf War Threat Grows</h2>
+    <h2>Iran Fires Drones at US Bases in Bahrain and Kuwait</h2>
     <div class="lead-row">
       <div class="lead-text">
-        <p>American fighter jets hit a Revolutionary Guard missile site on Qeshm Island after Iran fired drones at US bases in Bahrain and Kuwait. Bahrain intercepted the attacks. The strikes mark the sharpest escalation in the Gulf in years, with both sides signalling further action.</p>
+        <p>Iran fired drones at US bases in Bahrain and Kuwait on Wednesday in retaliation for American strikes on a Revolutionary Guard missile site on Qeshm Island. Bahrain intercepted the attacks. The exchange marks the sharpest escalation in the Gulf in years, with both sides signalling further action.</p>
         <div class="meta">Qeshm Island, Iran &bull; Sheikh Isa Air Base, Bahrain &bull; Ali Al Salem, Kuwait</div>
       </div>
       <div class="lead-art">
-        <img src="lead.jpg" alt="U.S. Navy jets over the Strait of Hormuz">
-        <div class="caption">U.S. Navy jets over the Strait of Hormuz. Illustration: The World Today</div>
+        <img src="lead.jpg" alt="Interceptors climb over a US air base in Bahrain at night">
+        <div class="caption">Interceptors climb over a US air base in Bahrain as Iranian drones are shot down. Illustration: The World Today</div>
       </div>
     </div>
   </div>
 
   <div class="grid">
-    <div class="story">
-      <div class="kicker">Europe &mdash; Ukraine War</div>
-      <div class="head-row">
-        <svg class="icon" viewBox="0 0 40 40">
-          <rect x="0" y="30" width="40" height="10" fill="#2e6da4"/>
-          <path d="M0 31 Q5 29.5 10 31 T20 31 T30 31 T40 31" stroke="#bcd6ea" stroke-width="1" fill="none"/>
-          <rect x="2" y="22" width="14" height="3" fill="#444"/>
-          <rect x="24" y="22" width="14" height="3" fill="#444"/>
-          <rect x="6" y="25" width="2.5" height="5" fill="#444"/>
-          <rect x="30" y="25" width="2.5" height="5" fill="#444"/>
-          <path d="M24 22 Q31 5 38 22" stroke="#999" stroke-width="3.5" fill="none"/>
-          <path d="M24 22 Q31 5 38 22" stroke="#f2f2f2" stroke-width="2.5" fill="none"/>
-          <line x1="28" y1="15" x2="28" y2="22" stroke="#bbb" stroke-width="1"/>
-          <line x1="33" y1="13" x2="33" y2="22" stroke="#bbb" stroke-width="1"/>
-          <rect x="16.5" y="25" width="8" height="2.5" fill="#555" transform="rotate(28 20 26)"/>
-        </svg>
-        <h3>Crimea Bridge Partly Collapses After Second Day of Strikes</h3>
-      </div>
-      <p>Ukrainian drones and missiles hit the Kerch Bridge for a second day. One arch collapsed into the strait, severing a key Russian supply route to Crimea.</p>
-    </div>
-
-    <div class="story">
-      <div class="kicker">Asia &mdash; Diplomacy</div>
-      <div class="head-row">
-        <svg class="icon" viewBox="0 0 40 40">
-          <rect x="1" y="13" width="12" height="14" fill="#fff" stroke="#999" stroke-width="0.5"/>
-          <rect x="1" y="14.5" width="12" height="1.6" fill="#b22234"/>
-          <rect x="1" y="18" width="12" height="1.6" fill="#b22234"/>
-          <rect x="1" y="21.5" width="12" height="1.6" fill="#b22234"/>
-          <rect x="1" y="25" width="12" height="1.6" fill="#b22234"/>
-          <rect x="1" y="13" width="5.5" height="7.5" fill="#3c3b6e"/>
-          <circle cx="2.8" cy="15" r="0.7" fill="#fff"/><circle cx="4.8" cy="15" r="0.7" fill="#fff"/>
-          <circle cx="2.8" cy="17.5" r="0.7" fill="#fff"/><circle cx="4.8" cy="17.5" r="0.7" fill="#fff"/>
-          <circle cx="3.8" cy="19.3" r="0.7" fill="#fff"/>
-          <rect x="14" y="13" width="12" height="14" fill="#de2910" stroke="#999" stroke-width="0.5"/>
-          <circle cx="18" cy="17.5" r="2" fill="#ffde00"/>
-          <circle cx="22" cy="15.5" r="0.9" fill="#ffde00"/><circle cx="23.5" cy="18" r="0.9" fill="#ffde00"/>
-          <circle cx="22.5" cy="20.5" r="0.9" fill="#ffde00"/><circle cx="20" cy="21.5" r="0.9" fill="#ffde00"/>
-          <rect x="27" y="13" width="12" height="14" fill="#fff" stroke="#999" stroke-width="0.5"/>
-          <rect x="27" y="17.7" width="12" height="4.6" fill="#0039a6"/>
-          <rect x="27" y="22.3" width="12" height="4.7" fill="#d52b1e"/>
-        </svg>
-        <h3>Trump, Xi and Putin to Hold First Trilateral Summit</h3>
-      </div>
-      <p>The three leaders meet tomorrow in Shenzhen as the APEC summit opens. Xi received Putin; Trump met QUAD leaders in Manila.</p>
-    </div>
-
     <div class="story">
       <div class="kicker">United States &mdash; Politics</div>
       <div class="head-row">
@@ -149,35 +100,6 @@
         <h3>Democrats Take Alaska Senate Seat</h3>
       </div>
       <p>Mary Peltola defeated incumbent Dan Sullivan. Democrats now hold 56 Senate seats to 44 for Republicans.</p>
-    </div>
-
-    <div class="story">
-      <div class="kicker">Health &mdash; United States</div>
-      <div class="head-row">
-        <svg class="icon" viewBox="0 0 40 40">
-          <defs><radialGradient id="vir" cx="38%" cy="35%" r="70%">
-            <stop offset="0%" stop-color="#9db4d4"/><stop offset="100%" stop-color="#46689c"/>
-          </radialGradient></defs>
-          <g stroke="#c0392b" stroke-width="1.6">
-            <line x1="31" y1="20" x2="35" y2="20"/><line x1="29.5" y1="25.5" x2="33" y2="27.5"/>
-            <line x1="25.5" y1="29.5" x2="27.5" y2="33"/><line x1="20" y1="31" x2="20" y2="35"/>
-            <line x1="14.5" y1="29.5" x2="12.5" y2="33"/><line x1="10.5" y1="25.5" x2="7" y2="27.5"/>
-            <line x1="9" y1="20" x2="5" y2="20"/><line x1="10.5" y1="14.5" x2="7" y2="12.5"/>
-            <line x1="14.5" y1="10.5" x2="12.5" y2="7"/><line x1="20" y1="9" x2="20" y2="5"/>
-            <line x1="25.5" y1="10.5" x2="27.5" y2="7"/><line x1="29.5" y1="14.5" x2="33" y2="12.5"/>
-          </g>
-          <g fill="#c0392b">
-            <circle cx="35.5" cy="20" r="1.8"/><circle cx="33.5" cy="28" r="1.8"/><circle cx="28" cy="33.5" r="1.8"/>
-            <circle cx="20" cy="35.5" r="1.8"/><circle cx="12" cy="33.5" r="1.8"/><circle cx="6.5" cy="28" r="1.8"/>
-            <circle cx="4.5" cy="20" r="1.8"/><circle cx="6.5" cy="12" r="1.8"/><circle cx="12" cy="6.5" r="1.8"/>
-            <circle cx="20" cy="4.5" r="1.8"/><circle cx="28" cy="6.5" r="1.8"/><circle cx="33.5" cy="12" r="1.8"/>
-          </g>
-          <circle cx="20" cy="20" r="11" fill="url(#vir)"/>
-          <ellipse cx="16" cy="15.5" rx="3.5" ry="2.2" fill="#fff" opacity="0.45" transform="rotate(-25 16 15.5)"/>
-        </svg>
-        <h3>US Loses Measles-Free Status After 26 Years</h3>
-      </div>
-      <p>More than 5,400 cases and 10 deaths in 2026 end a quarter-century of measles elimination.</p>
     </div>
 
     <div class="story">
@@ -218,44 +140,117 @@
       </div>
       <p>Chip giant reports record quarter but board declines to reinstate former CEO Jensen Huang. Hopper shipments to China halted.</p>
     </div>
+
+    <div class="story">
+      <div class="kicker">Europe &mdash; Ukraine War</div>
+      <div class="head-row">
+        <svg class="icon" viewBox="0 0 40 40">
+          <rect x="0" y="30" width="40" height="10" fill="#2e6da4"/>
+          <path d="M0 31 Q5 29.5 10 31 T20 31 T30 31 T40 31" stroke="#bcd6ea" stroke-width="1" fill="none"/>
+          <rect x="2" y="22" width="14" height="3" fill="#444"/>
+          <rect x="24" y="22" width="14" height="3" fill="#444"/>
+          <rect x="6" y="25" width="2.5" height="5" fill="#444"/>
+          <rect x="30" y="25" width="2.5" height="5" fill="#444"/>
+          <path d="M24 22 Q31 5 38 22" stroke="#999" stroke-width="3.5" fill="none"/>
+          <path d="M24 22 Q31 5 38 22" stroke="#f2f2f2" stroke-width="2.5" fill="none"/>
+          <line x1="28" y1="15" x2="28" y2="22" stroke="#bbb" stroke-width="1"/>
+          <line x1="33" y1="13" x2="33" y2="22" stroke="#bbb" stroke-width="1"/>
+          <rect x="16.5" y="25" width="8" height="2.5" fill="#555" transform="rotate(28 20 26)"/>
+        </svg>
+        <h3>Crimea Bridge Partly Collapses After Second Day of Strikes</h3>
+      </div>
+      <p>Ukrainian drones and missiles hit the Kerch Bridge for a second day. One arch collapsed into the strait, severing a key Russian supply route to Crimea.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">Middle East &mdash; Gaza</div>
+      <div class="head-row">
+        <svg class="icon" viewBox="0 0 40 40">
+          <circle cx="32" cy="9" r="5" fill="#f5e6a8"/>
+          <circle cx="34" cy="7.5" r="4.5" fill="#f8f5f0"/>
+          <circle cx="6" cy="8" r="1" fill="#7fa3c4"/>
+          <circle cx="12" cy="5" r="0.8" fill="#7fa3c4"/>
+          <circle cx="24" cy="4" r="0.8" fill="#7fa3c4"/>
+          <path d="M6 33 L20 13 L34 33 Z" fill="#5b7a99"/>
+          <path d="M20 13 L20 33" stroke="#3d5a73" stroke-width="1"/>
+          <path d="M16.5 33 L20 23 L23.5 33 Z" fill="#2c4a6b"/>
+          <line x1="4" y1="33.5" x2="36" y2="33.5" stroke="#3d5a73" stroke-width="1.5"/>
+          <g stroke="#a8c4dd" stroke-width="0.8">
+            <line x1="10" y1="16" x2="13" y2="19"/><line x1="13" y1="16" x2="10" y2="19"/>
+            <line x1="29" y1="17" x2="32" y2="20"/><line x1="32" y1="17" x2="29" y2="20"/>
+          </g>
+        </svg>
+        <h3>Cold Kills in Gaza Tents as Winter Sets In</h3>
+      </div>
+      <p>The UN warns of more deaths from cold as displaced Palestinians face winter without shelter; 1.7 million remain displaced, 1.4 million face acute hunger.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">Europe &mdash; France</div>
+      <div class="head-row">
+        <svg class="icon" viewBox="0 0 40 40">
+          <line x1="9" y1="20" x2="9" y2="11" stroke="#666" stroke-width="1.2"/>
+          <line x1="20" y1="19" x2="20" y2="9" stroke="#666" stroke-width="1.2"/>
+          <line x1="31" y1="20" x2="31" y2="12" stroke="#666" stroke-width="1.2"/>
+          <rect x="3" y="4" width="12" height="8" fill="#fff" stroke="#999" stroke-width="0.5"/>
+          <rect x="3" y="4" width="4" height="8" fill="#0055a4"/>
+          <rect x="11" y="4" width="4" height="8" fill="#ef4135"/>
+          <rect x="15" y="2" width="10" height="7" fill="#f2c94c" stroke="#999" stroke-width="0.5"/>
+          <rect x="26" y="5" width="10" height="7" fill="#e8e8e8" stroke="#999" stroke-width="0.5"/>
+          <circle cx="9" cy="24" r="3.5" fill="#8a5a3b"/>
+          <path d="M4 36 L5 29 Q9 27 13 29 L14 36 Z" fill="#33506e"/>
+          <circle cx="20" cy="23" r="3.5" fill="#c98a5a"/>
+          <path d="M15 36 L16 29 Q20 27 24 29 L25 36 Z" fill="#7a3b2e"/>
+          <circle cx="31" cy="24" r="3.5" fill="#5a3b2e"/>
+          <path d="M26 36 L27 29 Q31 27 35 29 L36 36 Z" fill="#3e6b4f"/>
+        </svg>
+        <h3>140,000 Join French Pay Protests</h3>
+      </div>
+      <p>Unions call a public-sector strike over wages and the cost of living; more than 140,000 march in Paris.</p>
+    </div>
   </div>
 
-  <div class="bottom">
-    <div class="bottom-row">
-      <div class="item">
-        <div class="label">Disaster</div>
-        <div class="text">19 killed as Russian An-12 crashes in Siberia</div>
-      </div>
-      <div class="item">
-        <div class="label">Markets</div>
-        <div class="text">Dow falls 850 points as NSA network goes down</div>
-      </div>
-      <div class="item">
-        <div class="label">Weather</div>
-        <div class="text">Cyclone Xavier, Cat 5, batters Cook Islands</div>
-      </div>
-      <div class="item">
-        <div class="label">Israel</div>
-        <div class="text">Kahana elected speaker; Eisenkot to form government</div>
-      </div>
-    </div>
-    <div class="bottom-row">
-      <div class="item">
-        <div class="label">Gaza</div>
-        <div class="text">Cold kills in Gaza tents; UN warns of more deaths as winter sets in</div>
-      </div>
-      <div class="item">
-        <div class="label">Vatican</div>
-        <div class="text">Pope Leo reveals cancer surgery after routine check find</div>
-      </div>
-      <div class="item">
-        <div class="label">Sport</div>
-        <div class="text">MS Dhoni announces retirement from the IPL</div>
-      </div>
-      <div class="item">
-        <div class="label">France</div>
-        <div class="text">140,000 march in Paris in public-sector pay protest</div>
-      </div>
+  <div class="around">
+    <h4>Around the World</h4>
+    <div class="cols">
+      <div class="wl"><b>Asia</b> &mdash; Trump, Xi, Putin summit tomorrow in Shenzhen.</div>
+      <div class="wl"><b>US</b> &mdash; Measles-free status lost: 5,400+ cases, 10 deaths.</div>
+      <div class="wl"><b>Gulf</b> &mdash; US says it sank five Iranian tankers.</div>
+      <div class="wl"><b>India</b> &mdash; Cyclone Akvan nears Andhra Pradesh; landfall 20 Nov.</div>
+      <div class="wl"><b>Europe</b> &mdash; EU proposes &euro;45bn Ukraine loan for 2027.</div>
+      <div class="wl"><b>Turkey</b> &mdash; COP31 decisive phase; 144 items disputed.</div>
+      <div class="wl"><b>Africa</b> &mdash; Nigeria leads six-nation digital-trade accord.</div>
+      <div class="wl"><b>Brazil</b> &mdash; Isolated Awa group emerges in the Amazon.</div>
+      <div class="wl"><b>Russia</b> &mdash; Military An-12 crashes in Siberia; 19 killed.</div>
+      <div class="wl"><b>US</b> &mdash; Dow falls 850 points as NSA network goes down.</div>
+      <div class="wl"><b>Cook Islands</b> &mdash; Cyclone Xavier, Cat 5, batters islands.</div>
+      <div class="wl"><b>Israel</b> &mdash; Kahana new speaker; Eisenkot to form government.</div>
+      <div class="wl"><b>Vatican</b> &mdash; Pope Leo reveals cancer surgery.</div>
+      <div class="wl"><b>India</b> &mdash; MS Dhoni announces retirement from the IPL.</div>
+      <div class="wl"><b>Jordan</b> &mdash; Iran fires missiles at US forces at Al-Azraq base.</div>
+      <div class="wl"><b>US</b> &mdash; Merchant gets 27 years over Trump assassination plot.</div>
+      <div class="wl"><b>Iran</b> &mdash; Amnesty: repression intensified during the war.</div>
+      <div class="wl"><b>Japan</b> &mdash; Russian bomber activity near Japan, Taiwan airspace.</div>
+      <div class="wl"><b>Philippines</b> &mdash; Trump announces progress on trade, defence ties.</div>
+      <div class="wl"><b>South Korea</b> &mdash; $75,000 bounties for reporting AI exam cheats.</div>
+      <div class="wl"><b>Thailand</b> &mdash; Clean water ordered over Myanmar mine arsenic.</div>
+      <div class="wl"><b>Mongolia</b> &mdash; President Khurelsukh resigns in railway scandal.</div>
+      <div class="wl"><b>Costa Rica</b> &mdash; Journalist probing drug trafficking killed.</div>
+      <div class="wl"><b>Bangladesh</b> &mdash; Dhaka unrest: station burned, workers clash.</div>
+      <div class="wl"><b>Indonesia</b> &mdash; Jakarta questions flood defences as rains begin.</div>
+      <div class="wl"><b>Mozambique</b> &mdash; Mondlane on trial over 2024 election protests.</div>
+      <div class="wl"><b>South Africa</b> &mdash; 17 killed in two mass shootings.</div>
+      <div class="wl"><b>Haiti</b> &mdash; Security pact formalised with El Salvador.</div>
+      <div class="wl"><b>Papua New Guinea</b> &mdash; Rio Tinto pays $250m for Panguna repair.</div>
+      <div class="wl"><b>Yemen</b> &mdash; UNICEF: 64 children killed since September.</div>
+      <div class="wl"><b>Australia</b> &mdash; New sanctions over West Bank settlements.</div>
+      <div class="wl"><b>Guinea</b> &mdash; Illegal-mining crackdown displaces residents.</div>
+      <div class="wl"><b>UK</b> &mdash; UK and EU discuss cooperation before Brussels summit.</div>
+      <div class="wl"><b>Germany</b> &mdash; First financial-literacy strategy adopted.</div>
+      <div class="wl"><b>Norway</b> &mdash; Extremism assessment updated; threat level same.</div>
+      <div class="wl"><b>US</b> &mdash; Chip export scrutiny widens to SE Asia, Brazil.</div>
+      <div class="wl"><b>Pakistan</b> &mdash; Pakistan edge India in blind cricket thriller.</div>
+      <div class="wl"><b>Pakistan</b> &mdash; Petrol cut Rs3 to Rs325; diesel unchanged.</div>
     </div>
   </div>
 
