@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  body { width: 1024px; height: 1024px; font-family: Georgia, 'Times New Roman', serif; background: #f8f5f0; color: #1a1a1a; overflow: hidden; }
+  .page { width: 1024px; height: 1024px; padding: 28px 36px 24px; display: flex; flex-direction: column; }
+
+  /* Masthead */
+  .masthead { text-align: center; border-bottom: 4px double #1a1a1a; padding-bottom: 10px; margin-bottom: 6px; }
+  .masthead h1 { font-size: 64px; font-weight: 900; letter-spacing: 6px; line-height: 1; font-family: 'Times New Roman', serif; }
+  .masthead .tagline { font-size: 11px; letter-spacing: 3px; text-transform: uppercase; color: #666; margin-top: 2px; }
+
+  /* Date bar */
+  .datebar { display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #1a1a1a; padding: 8px 0; margin-bottom: 14px; }
+  .datebar .date { font-size: 22px; font-weight: 700; }
+  .datebar .day { font-size: 14px; text-transform: uppercase; letter-spacing: 2px; color: #555; }
+  .datebar .edition { font-size: 13px; font-style: italic; color: #555; }
+
+  /* Lead story */
+  .lead { border-bottom: 1px solid #999; padding-bottom: 14px; margin-bottom: 14px; }
+  .lead .kicker { font-size: 13px; font-weight: 700; text-transform: uppercase; letter-spacing: 2px; color: #b91c1c; margin-bottom: 4px; }
+  .lead h2 { font-size: 44px; font-weight: 900; line-height: 1.05; margin-bottom: 8px; }
+  .lead p { font-size: 16px; line-height: 1.45; color: #333; }
+  .lead .meta { font-size: 12px; color: #777; margin-top: 6px; font-style: italic; }
+
+  /* Story grid */
+  .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 0 28px; flex: 1; }
+  .story { border-bottom: 1px solid #ccc; padding: 10px 0 10px; }
+  .story:last-child, .story:nth-last-child(2) { border-bottom: none; }
+  .story .kicker { font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 1.5px; color: #b91c1c; margin-bottom: 3px; }
+  .story h3 { font-size: 21px; font-weight: 800; line-height: 1.15; margin-bottom: 4px; }
+  .story p { font-size: 13.5px; line-height: 1.4; color: #444; }
+
+  /* Bottom strip */
+  .bottom { border-top: 2px solid #1a1a1a; padding-top: 10px; margin-top: 12px; display: flex; justify-content: space-between; }
+  .bottom .item { flex: 1; padding: 0 10px; border-right: 1px solid #ccc; }
+  .bottom .item:last-child { border-right: none; }
+  .bottom .item .label { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: #b91c1c; }
+  .bottom .item .text { font-size: 13px; font-weight: 700; line-height: 1.3; margin-top: 2px; }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="masthead">
+    <h1>THE WORLD TODAY</h1>
+    <div class="tagline">World News &bull; One Day, One Page</div>
+  </div>
+
+  <div class="datebar">
+    <span class="day">Wednesday</span>
+    <span class="date">18 November 2026</span>
+    <span class="edition">Daily Edition</span>
+  </div>
+
+  <div class="lead">
+    <div class="kicker">Middle East &mdash; Gulf Crisis</div>
+    <h2>US Jets Strike Iran as Gulf War Threat Grows</h2>
+    <p>American fighter jets hit a Revolutionary Guard missile site on Qeshm Island after Iran fired drones at US bases in Bahrain and Kuwait. Bahrain intercepted the attacks. The strikes mark the sharpest escalation in the Gulf in years, with both sides signalling further action.</p>
+    <div class="meta">Qeshm Island, Iran &bull; Sheikh Isa Air Base, Bahrain &bull; Ali Al Salem, Kuwait</div>
+  </div>
+
+  <div class="grid">
+    <div class="story">
+      <div class="kicker">Europe &mdash; Ukraine War</div>
+      <h3>Crimea Bridge Partly Collapses After Second Day of Strikes</h3>
+      <p>Ukrainian drones and missiles hit the Kerch Bridge for a second day. One arch collapsed into the strait, severing a key Russian supply route to Crimea.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">Asia &mdash; Diplomacy</div>
+      <h3>Trump, Xi and Putin to Hold First Trilateral Summit</h3>
+      <p>The three leaders meet tomorrow in Shenzhen as the APEC summit opens. Xi received Putin; Trump met QUAD leaders in Manila.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">United States &mdash; Politics</div>
+      <h3>Democrats Take Alaska Senate Seat</h3>
+      <p>Mary Peltola defeated incumbent Dan Sullivan. Democrats now hold 56 Senate seats to 44 for Republicans.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">Health &mdash; United States</div>
+      <h3>US Loses Measles-Free Status After 26 Years</h3>
+      <p>More than 5,400 cases and 10 deaths in 2026 end a quarter-century of measles elimination.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">Africa &mdash; Health Crisis</div>
+      <h3>Ebola Outbreak in DRC More Than Doubles</h3>
+      <p>Over 11,000 cases and 5,400 deaths in three months. Nearly three-quarters of infected children under five die.</p>
+    </div>
+
+    <div class="story">
+      <div class="kicker">Business &mdash; Technology</div>
+      <h3>Nvidia Revenue Doubles to $115.8 Billion</h3>
+      <p>Chip giant reports record quarter but board declines to reinstate former CEO Jensen Huang. Hopper shipments to China halted.</p>
+    </div>
+  </div>
+
+  <div class="bottom">
+    <div class="item">
+      <div class="label">Disaster</div>
+      <div class="text">19 killed as Russian An-12 crashes in Siberia</div>
+    </div>
+    <div class="item">
+      <div class="label">Markets</div>
+      <div class="text">Dow falls 850 points as NSA network goes down</div>
+    </div>
+    <div class="item">
+      <div class="label">Weather</div>
+      <div class="text">Cyclone Xavier, Cat 5, batters Cook Islands</div>
+    </div>
+    <div class="item">
+      <div class="label">Israel</div>
+      <div class="text">Kahana elected speaker; Eisenkot to form government</div>
+    </div>
+  </div>
+
+</div>
+</body>
+</html>
